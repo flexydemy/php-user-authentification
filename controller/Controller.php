@@ -135,11 +135,11 @@ class Controller {
                                     $model = new Database();
                                     $reponse = $model->join($_username, $_email, $_password);
 
-                                    if ($reponse > 0) {
+                                    if ($reponse) {
                                         $model = new Database();
                                         $res = $model->getParams($_username);
                                         foreach ($res as $response){
-                                            $user_name = $response->username;en l
+                                            $user_name = $response->username;
                                             $_SESSION['username'] = $user_name;
                                         }
                                         header("Location:?action=home&user=".$user_name);

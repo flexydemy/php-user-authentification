@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="text-center mt-4">
                                     <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" name="update">Modifier</button>
-                                
+                                    <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" name="delete">Supprimer</button>
                                     <br>
                                 </div>
                             </form>
