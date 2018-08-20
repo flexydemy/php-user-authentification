@@ -60,16 +60,12 @@ class Controller {
             if (isset($_email)){
                 if (!empty($_password)) {
                     if ($_password == $_password_verif){
-                        if (isset($first_name) && isset($last_name)){
-                            $model = new Database();
-                            $reponse = $model->update($_SESSION['id'], $_email, $_password, $first_name, $last_name);
-                            if ($reponse){
-                                $errors = "Votre profil a ete modifier";
-                            }else{
-                                $errors = "Votre profil n'a pas ete modifier";
-                            }
+                        $model = new Database();
+                        $reponse = $model->update($_SESSION['id'], $_email, $_password, $first_name, $last_name);
+                        if ($reponse){
+                            $errors = "Votre profil a ete modifier";
                         }else{
-                            $errors = "Le nom et prenom ne doit pas etre vide";
+                            $errors = "Votre profil n'a pas ete modifier";
                         }
                     }else{
                         $errors = "les mots de passe ne sont pas identiques";
