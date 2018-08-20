@@ -39,6 +39,7 @@ class Database
     		'email' => $email,
     		'password' => $password
     	));
+    	return true;
     }
 
     public function update($id, $email, $password, $first_name, $last_name){

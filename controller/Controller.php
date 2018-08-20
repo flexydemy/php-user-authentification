@@ -139,8 +139,7 @@ class Controller {
                                         $model = new Database();
                                         $res = $model->getParams($_username);
                                         foreach ($res as $response){
-                                            $user_name = $response->username;
-                                            var_dump($user_name);
+                                            $user_name = $response->username;en l
                                             $_SESSION['username'] = $user_name;
                                         }
                                         header("Location:?action=home&user=".$user_name);
