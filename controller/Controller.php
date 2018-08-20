@@ -135,7 +135,18 @@ class Controller {
                                     $model = new Database();
                                     $reponse = $model->join($_username, $_email, $_password);
 
-                                    header("Location:?action=home&user=".$_username);
+                                    if ($reponse > 0) {
+                                        $model = new Database();
+                                        $res = $model->getParams($_username);
+                                        foreach ($res as $response){
+                                            $user_name = $response->username;
+                                            var_dump($user_name);
+                                            $_SESSION['username'] = $user_name;
+                                        }
+                                        header("Location:?action=home&user=".$user_name);
+                                    }else{
+                                        $errors =  "Identifiants incorrectes";
+                                    }
                                 }else{
                                     $errors = "Le mot de passe doit contenir au moins 6 caracteres";
                                 }
