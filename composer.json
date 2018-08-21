@@ -1,0 +1,15 @@
+{
+    "name": "claudelkros/php-user-auth",
+    "authors": [
+        {
+            "name": "Taira manuel desire",
+            "email": "desiretaira@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "src\\" : "src"
+        }
+    },
+    "require": {}
+}

@@ -1,4 +1,6 @@
 <?php
+namespace src\model;
+use \PDO;
 /**
  * Created by PhpStorm.
  * User: CLAUDEL KROS

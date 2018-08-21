@@ -1,7 +1,6 @@
 <?php 
-require 'controller/Controller.php';
-
-$app = new Controller();
+require 'vendor\autoload.php';
+$app = new \src\controller\Controller();
 
 
 if (isset($_GET['action'])) {

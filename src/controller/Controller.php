@@ -1,6 +1,8 @@
- <?php
+<?php
+namespace src\controller;
+ use src\model\Database;
 
- require 'model/database.php';
+ require 'src/model/database.php';
 /**
  * summary
  */
@@ -32,11 +34,11 @@ class Controller {
             header("Location:?action=connexion");
         }
 
-        require 'view/home.php';
+        require 'src/view/home.php';
     }
 
     public function logout(){
-        require 'view/disconnect.php';
+        require 'src/view/disconnect.php';
     }
 
     public function update(){
@@ -84,7 +86,7 @@ class Controller {
                 header("Location:?action=connexion");
             }
         }
-        require 'view/users.php';
+        require 'src/view/users.php';
     }
 
     public function connexion(){
@@ -109,7 +111,7 @@ class Controller {
             }
         }
 
-        require 'view/connexion.php';
+        require 'src/view/connexion.php';
     }
 
     public function inscrip(){
@@ -161,6 +163,6 @@ class Controller {
                 $errors = "le Nom d'utilisateur doit contenir au moins 6 caracteres ";
             }
         }
-        require 'view/inscription.php';
+        require 'src/view/inscription.php';
     }
 }

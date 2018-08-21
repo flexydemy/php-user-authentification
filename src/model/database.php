@@ -1,5 +1,7 @@
 <?php
-require 'statement.php';
+namespace src\model;
+use src\model\Statement;
+use \PDO;
 /**
  * summary
  */
